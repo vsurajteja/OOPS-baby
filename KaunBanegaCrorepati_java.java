@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /*
 	
 	Object Oriented Programming 
@@ -112,11 +114,11 @@ interface Quiz{
 
 }
 
-public class KaunBanegaCrorepati implements Quiz{
+public class KaunBanegaCrorepati_java implements Quiz{
 
 	public static void main(String[] args){
 
-		Quiz kbc = new KaunBanegaCrorepati();
+		Quiz kbc = new KaunBanegaCrorepati_java();
 
 		for(int i = 0; i < 15; i++)
 			// create an object of question with 3 parameters
@@ -152,4 +154,77 @@ public class KaunBanegaCrorepati implements Quiz{
 
 	}
 
+	public void addQuestion(Question q) {
+		
+	}
+
+	public Participant registerParticipant(String name, int age, String phone) {
+		return null;
+	}
+
+	public int getCurrentLevel() {
+		return 0;
+	}
+
+	public Question getNextQuestion() {
+		return null;
+	}
+
+	public boolean lockAnswer(Question q, String answer) {
+		return false;
+	}
+
+	public int getPrizeMoney() {
+		return 0;
+	}
+
 }
+//============Question class==============
+
+class Question{
+	String question_text="";
+	int level =0;
+	String answer="";
+	
+	
+	
+	public Question(String question_text, int i, String answer){
+		this.answer= answer;
+		this.level=level;
+		this.question_text= question_text;
+		
+	}
+	//Returns the question text
+	public String getQuestion(){
+		return this.question_text;
+	}
+	//Returns the level of the question (1-15 inclusive) 
+	public int getLevel(){
+		return this.level;
+	}
+	//Returns the correct answer
+	public String getCorrrectAnswer(){
+		return this.answer;
+	}
+}
+//============Participant class==============
+class Participant{
+	String name;
+	int age;
+	String phone;
+	
+	//Returns the name
+	public String getname(){
+		return this.name;
+	}
+	
+	//Returns the age 
+	public int getAge(){
+		return this.age;
+	}
+	//Returns the phone number 
+	public String getPhone(){
+		return this.phone;
+	}
+}
+
